@@ -3,7 +3,7 @@
  <div id="smart-button-container">
       <div style="text-align: center;">
         <div style="margin-bottom: 1.25rem;">
-          <p></p>
+          <p>You can choose any item you would like to purchase from the list below.</p>
           <select id="item-options"><option value=" Goat Milk Soap Bar" price="6.00"> Goat Milk Soap Bar - 6.00 USD</option><option value="Ghiradeli Chocolate" price="3.49">Ghiradeli Chocolate - 3.49 USD</option><option value="Lemon & Mint Bubble Bath" price="8.00">Lemon & Mint Bubble Bath - 8.00 USD</option><option value="Caramel Popcorn" price="5.25">Caramel Popcorn - 5.25 USD</option><option value="Non-scented Candle" price="0.99">Non-scented Candle - 0.99 USD</option><option value="Mini Bluetooth Speaker (Comes with smooth jazz)" price="15.00">Mini Bluetooth Speaker (Comes with smooth jazz) - 15.00 USD</option></select>
           <select style="visibility: hidden" id="quantitySelect"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select>
         </div>
@@ -20,7 +20,7 @@
     if (!isNaN(quantity)) {
       quantitySelect.style.visibility = "visible";
     }
-    var orderDescription = '';
+    var orderDescription = 'You can choose any item you would like to purchase from the list below.';
     if(orderDescription === '') {
       orderDescription = 'Item';
     }
@@ -92,5 +92,4 @@
   }
   initPayPalButton();
     </script>
-  
   </html>
