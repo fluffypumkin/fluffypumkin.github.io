@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html>
- <div id="smart-button-container">
+<div id="smart-button-container">
       <div style="text-align: center;">
         <div style="margin-bottom: 1.25rem;">
-          <p>You can choose any item you would like to purchase from the list below.</p>
-          <select id="item-options"><option value=" Goat Milk Soap Bar" price="6.00"> Goat Milk Soap Bar - 6.00 USD</option><option value="Ghiradeli Chocolate" price="3.49">Ghiradeli Chocolate - 3.49 USD</option><option value="Lemon & Mint Bubble Bath" price="8.00">Lemon & Mint Bubble Bath - 8.00 USD</option><option value="Caramel Popcorn" price="5.25">Caramel Popcorn - 5.25 USD</option><option value="Non-scented Candle" price="0.99">Non-scented Candle - 0.99 USD</option><option value="Mini Bluetooth Speaker (Comes with smooth jazz)" price="15.00">Mini Bluetooth Speaker (Comes with smooth jazz) - 15.00 USD</option></select>
+          <p></p>
+          <select id="item-options"><option value="Mountain Witch Alder " price="15.00">Mountain Witch Alder  - 15.00 USD</option><option value="Cattleya Orchid" price="15.00">Cattleya Orchid - 15.00 USD</option><option value="Shy Plant" price="15.00">Shy Plant - 15.00 USD</option><option value="A Tree in the Park" price="18.00">A Tree in the Park - 18.00 USD</option><option value="Brewer's Oak" price="18.00">Brewer's Oak - 18.00 USD</option><option value="The Goldfish Pond" price="18.00">The Goldfish Pond - 18.00 USD</option></select>
           <select style="visibility: hidden" id="quantitySelect"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select>
         </div>
       <div id="paypal-button-container"></div>
@@ -12,26 +11,21 @@
     </div>
     <script src="https://www.paypal.com/sdk/js?client-id=AfEqGSivnE9B0Iny7aaeV9b-4A4OHO3vq0n6PEBfloVH5sFjJ7KGVuU-5VZPkJd7m_7gO-aM7xSrDpeb&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
     <script>
-     
-     
-     
-     
-     
       function initPayPalButton() {
-        var shipping = 5.50;
+        var shipping = 3.00;
         var itemOptions = document.querySelector("#smart-button-container #item-options");
     var quantity = parseInt(4);
     var quantitySelect = document.querySelector("#smart-button-container #quantitySelect");
     if (!isNaN(quantity)) {
       quantitySelect.style.visibility = "visible";
     }
-    var orderDescription = 'You can choose any item you would like to purchase from the list below.';
+    var orderDescription = '';
     if(orderDescription === '') {
       orderDescription = 'Item';
     }
     paypal.Buttons({
       style: {
-        shape: 'pill',
+        shape: 'rect',
         color: 'gold',
         layout: 'vertical',
         label: 'paypal',
@@ -97,4 +91,4 @@
   }
   initPayPalButton();
     </script>
-  </html>
+</html>
